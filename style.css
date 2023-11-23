@@ -1,0 +1,312 @@
+/* 基本CSS */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    color:#4e440a;
+}
+body{
+    font-family: 'Kiwi Maru', serif;
+}
+ul{
+    list-style:none;
+}
+a{
+    font-weight:600;
+    margin:0 15px;
+}
+a:hover{
+    color:#20b2aa;
+}
+h1{
+    font-size:40px;
+    color:#8f8236;
+}
+p{
+    padding-bottom:12px;
+}
+span{
+    font-size:1.2em;
+    padding:0 5px;
+    color:#20b2aa;
+}
+section{
+    padding:60px 0;
+}
+iframe{
+    width:100%
+}
+/* header */
+header{
+    background-color:#d0dfde;
+    padding-bottom:20px;
+}
+#gnav ul{
+    display:flex;
+    justify-content:right;
+    padding:40px 10px 20px;
+}
+/* ◆div class titleを指定している */
+.title{
+    width:300px;
+    margin:0 auto;
+}
+/* contents */
+/* ◆.containerは大きい箱 */
+.container{
+    width:1180px;
+    margin:0 auto;
+}
+section h2,h1.txcenter{
+    text-align:center;
+    margin-bottom:60px;
+    font-size:1.6em;
+}
+section h3{
+    font-size:1.2em;
+    padding:10px;
+    color:#20b2aa;
+}
+#sec1,#sec3{
+    background-color:#f5f7e5;
+}
+#sec2{
+    background-color:#d0dfde;
+}
+.concept{
+    display:flex;
+    flex-wrap:wrap;
+}
+.concept img{
+    width:50%;
+}
+.concept-text{
+    width:50%;
+    padding:30px;
+}
+/* ↑conceptの imgとtextのハコを、ブラウザ左右半分ずつ表示 */
+.concept-text p{
+    padding:20px;
+}
+.item-box-wrap{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+.item-box{
+    background-color:#e0ecea;
+    width:250px;
+    padding:15px;
+    border-radius:15px;
+}
+.item-box h3{
+    text-align:center;
+}
+.item-box img{
+    width:100%;
+}
+.item-box p{
+    font-size:0.9em;
+    padding:5px;
+    text-align:justify;
+}
+.btn{
+    background-color:#e0ecea;
+    display:block;
+    width:150px;
+    padding:15px 20px;
+    border-radius:5px;
+    box-shadow:6px 6px 10px 0 rgba(0,0,0,.4);
+    margin:50px auto 0;
+    text-align:center;
+}
+.shop-info th{
+    text-align:left;
+    padding:5px 30px;
+}
+/* footer */
+footer{
+    background-color:#d0dfde;
+    padding:60px 0;
+    text-align:center;
+}
+footer ul{
+    display:flex;
+    justify-content:center;
+    padding:20px;
+}
+#pagetop{
+    position:fixed;
+    bottom:30px;
+    right:50px;
+}
+#pagetop img{
+    width:50px;
+}
+/* aboutページのCSS */
+.company-pro{
+    border-collapse:collapse;
+    margin:0 auto;
+}
+.company-pro th{
+    width:20%
+    padding:15px 10px;
+    border:1px solid #c5cec4;
+}
+.table-title{
+    font-size:1.4em;
+    text-align:center;
+}
+.company-pro td{
+    border:1px solid #c5cec4;
+    padding:15px 10px;
+}
+/* ItemsページのCSS */
+#item-sec1{
+    background:url(item-top.jpg);
+    background-size:cover;
+    background-position:center;
+    height:600px;
+    position:relative;
+    text-align:center;
+}
+#item-sec1::before{
+    position:absolute;
+    z-index:0;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    content:"";
+    display:block;
+    background-color:rgba(253,254,255,0.3);
+}
+#item-sec1 .main-tt1{
+    position:inherit;
+    z-index:2;
+}
+#item-sec1 p strong{
+    font-size:5em;
+    color:#ed40b9;
+}
+#item-sec1 h3{
+    padding-top:50px;
+}
+.item-list{
+    background-color:#fdffec;
+}
+.clearfix{
+    width:32%
+}
+.clearfix h2{
+    color:#20b2aa;
+    font-size:1.4em;
+    margin-bottom:10px;
+    text-align:left;
+}
+.clearfix img{
+    width:180px;
+    border-radius:50%;
+    margin:20px;
+    float:right;
+}
+.clearfix::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.flex{
+    width:100%
+    padding-top:50px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.flex img{
+    width:20%;
+    margin:10px;
+}
+
+/* タブレットCSS */
+@media(max-width:768px){
+    .container{
+        width:90%;
+    }
+    .title img{
+        width:100%;
+    }
+    .item-box{
+        width:48%
+        margin:10px auto;
+    }
+    .clearfix{
+        width:54%;
+    }
+    .clearfix h2{
+        color:#20b2aa;
+        font-size:1.4em;
+        margin-bottom:10px;
+    }
+}
+/* スマホCSS */
+@media(max-width:640px){
+    #sec1 h1{
+        text-align:center;
+    }
+    .title{
+        width:200px;
+        text-align:center;
+        padding:30px 0;
+    }
+    #gnav ul{
+        justify-content:center;
+    }
+    .concept img{
+        width:100%;
+    }
+    .concept-text{
+        width:100%;
+        padding:30px 0;
+    }
+    .concept p{
+        width:100%;
+    }
+    .item-box{
+        width:100%;
+        margin:10px;
+    }
+    #sec3 p img{
+        width:20%;
+    }
+    .info{
+        font-size:.9em;
+    }
+    footer{
+        padding:30px 0;
+    }
+    footer ul{
+        padding:5px 5px 20px 10px;
+    }
+    .footer-nav li{
+        padding-right:0;
+    }
+    .footer-nav a{
+        font-size:0.8em;
+        margin:0 5px;
+        padding:2px;
+    }
+    #pagetop img{
+        display:none;
+    }
+    .clearfix{
+        width:100%;
+    }
+    .clearfix h2{
+        color:#20b2aa;
+        font-size:1.4em;
+        margin-bottom:10px;
+    }
+    .flex img{
+        width:100%;
+    }
+}
